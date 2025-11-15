@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="es">
 <head>
   <meta charset="utf-8" />
@@ -11,29 +12,28 @@
     .page{max-width:960px;margin:30px auto;padding:28px;border:8px solid #000;background:#fff}
     .masthead{display:flex;align-items:flex-end;justify-content:space-between;border-bottom:6px double #000;padding-bottom:8px;margin-bottom:18px}
     .masthead .left{font-size:82px;line-height:0.85;letter-spacing:8px;font-weight:900;text-transform:uppercase}
-    .masthead .meta{font-size:12px;text-align:right}
+    .masthead .meta{font-size:12px;text-align:right}.logo-img{height:84px;object-fit:cover;border:3px solid #000;padding:2px;background:#fff}
 
-    .logo-img{height:84px;object-fit:cover;border:3px solid #000;padding:2px;background:#fff}
+.extra-banner{background:#000;color:#fff;padding:10px 16px;margin:14px 0;font-size:56px;font-weight:900;text-align:center;letter-spacing:6px}
 
-    .extra-banner{background:#000;color:#fff;padding:10px 16px;margin:14px 0;font-size:56px;font-weight:900;text-align:center;letter-spacing:6px}
+.columns{column-count:3;column-gap:28px;font-size:14px;line-height:1.45;text-align:justify}
+h2{font-size:18px;margin:0 0 8px 0;letter-spacing:1px}
+p.lead{font-style:italic;margin-top:0}
+.pull-quote{float:right;width:40%;margin:6px 0 12px 18px;padding:8px;border:2px solid #000;font-weight:700}
+.credit{font-size:11px;text-align:center;margin-top:18px}
+.controls{display:flex;gap:8px;justify-content:flex-end;margin-bottom:12px}
+.btn{border:2px solid #000;padding:6px 10px;background:transparent;cursor:pointer;font-weight:700}
+.btn:active{transform:translateY(1px)}
+.lead-story{column-span:all;margin-bottom:18px}
+.dropcap{float:left;font-size:48px;line-height:40px;padding-right:8px;font-weight:900}
 
-    .columns{column-count:3;column-gap:28px;font-size:14px;line-height:1.45;text-align:justify}
-    h2{font-size:18px;margin:0 0 8px 0;letter-spacing:1px}
-    p.lead{font-style:italic;margin-top:0}
-    .pull-quote{float:right;width:40%;margin:6px 0 12px 18px;padding:8px;border:2px solid #000;font-weight:700}
-    .credit{font-size:11px;text-align:center;margin-top:18px}
-    .controls{display:flex;gap:8px;justify-content:flex-end;margin-bottom:12px}
-    .btn{border:2px solid #000;padding:6px 10px;background:transparent;cursor:pointer;font-weight:700}
-    .btn:active{transform:translateY(1px)}
-    .lead-story{column-span:all;margin-bottom:18px}
-    .dropcap{float:left;font-size:48px;line-height:40px;padding-right:8px;font-weight:900}
+/* Imagen principal estilo periódico */
+.lead-image{width:100%;height:auto;border:4px solid #000;margin-bottom:12px;display:block}
+.small-img{width:100%;height:auto;border:2px solid #000;margin:8px 0}
 
-    /* Imagen principal estilo periódico */
-    .lead-image{width:100%;height:auto;border:4px solid #000;margin-bottom:12px;display:block}
-    .small-img{width:100%;height:auto;border:2px solid #000;margin:8px 0}
+@media print{body{background:#fff}.page{border:0;padding:6mm}.controls{display:none}}
+@media (max-width:720px){.masthead .left{font-size:44px}.columns{column-count:1}.extra-banner{font-size:34px}}
 
-    @media print{body{background:#fff}.page{border:0;padding:6mm}.controls{display:none}}
-    @media (max-width:720px){.masthead .left{font-size:44px}.columns{column-count:1}.extra-banner{font-size:34px}}
   </style>
 </head>
 <body>
@@ -42,63 +42,60 @@
       <button class="btn" onclick="window.print()">Imprimir</button>
       <button class="btn" id="toggleBanner">Ocultar/Mostrar EXTRA</button>
       <button class="btn" id="invert">Invertir (negro/blanco)</button>
-    </div>
-
-    <header class="masthead">
-      <div style="display:flex;gap:12px;align-items:center;">
-        <img class="logo-img" src="https://picsum.photos/g/seed/logo/220/84" alt="Logo extra" />
-        <div class="left">EXTRA<br/>EXTRA</div>
-      </div>
-      <div class="meta">
-        <div><strong>EDICIÓN ESPECIAL</strong></div>
-        <div>15 de noviembre de 2025</div>
-        <div>— Madrid —</div>
-      </div>
-    </header>
-
-    <div class="extra-banner" id="banner">¡NOTICIA DE ÚLTIMA HORA!</div>
-
-    <article class="lead-story">
-      <!-- Imagen principal (hotlinked, escala en B/N) -->
-      <img class="lead-image" src="https://picsum.photos/g/seed/lead/1200/400" alt="Foto principal - noticia" />
-
-      <div class="columns">
-        <h2>Gran Titular: Suceso que paraliza la ciudad</h2>
-        <p class="lead"><span class="dropcap">L</span>a ciudad se ha despertado hoy con una noticia que ha puesto en vilo a todos los ciudadanos. Los detalles comienzan a llegar y los testigos describen escenas propias de una película.</p>
-
-        <p>El acontecimiento, ocurrido en la madrugada, ha obligado a cortar varias calles y ha movilizado a los servicios de emergencia. Las primeras informaciones indican que no hay heridos de gravedad, pero la investigación continúa abierta. Varias autoridades locales han comparecido para ofrecer declaraciones oficiales y pedir calma a la población.</p>
-
-        <!-- Imagen pequeña en columna (hotlink) -->
-        <img class="small-img" src="https://picsum.photos/g/seed/column1/600/320" alt="Foto secundaria 1" />
-
-        <div class="pull-quote">"Fue impresionante ver cómo la gente se unía para ayudar" — un testigo.</div>
-
-        <p>Los comerciantes de la zona han señalado pérdidas materiales y una incertidumbre generalizada. A medida que pasen las horas, se espera que las cámaras de seguridad y las redes sociales aporten mayores pistas sobre lo sucedido. Mientras tanto, los ciudadanos intentan retomar la normalidad en una jornada tensa pero controlada por las fuerzas responsables.</p>
-
-        <h2>Contexto histórico</h2>
-        <p>Situado en pleno corazón de la ciudad, este enclave ha vivido episodios similares a lo largo del tiempo, aunque ninguno con la magnitud de lo ocurrido hoy. Las comparaciones con eventos anteriores sirven para entender la reacción social y las medidas adoptadas.</p>
-
-        <!-- Otra imagen pequeña -->
-        <img class="small-img" src="https://picsum.photos/g/seed/column2/600/320" alt="Foto secundaria 2" />
-
-        <h2>Opinión</h2>
-        <p>Es imprescindible que las autoridades aprovechen este episodio para mejorar los canales de comunicación y coordinar recursos. La sociedad ha mostrado solidaridad y eso debe ser valorado como un pilar para la reconstrucción de la confianza.</p>
-
-        <h2>Sucesos breves</h2>
-        <p><strong>- Tráfico:</strong> Interrupciones en varias vías principales hasta nuevo aviso.</p>
-        <p><strong>- Transporte público:</strong> Modificaciones temporales en dos líneas de metro.</p>
-        <p><strong>- Servicios:</strong> Recomendación de evitar desplazamientos innecesarios en la zona afectada.</p>
-
-        <h2>Cartas al director</h2>
-        <p>Si tienes alguna información o deseas contarnos tu experiencia, escribe a <em>redaccion@extra-extra.local</em> (ficticio).</p>
-
-      </div>
-    </article>
-
-    <footer class="credit">EXTRA EXTRA — Periódico clásico en blanco y negro — Diseño: estilo vintage</footer>
+    </div><header class="masthead">
+  <div style="display:flex;gap:12px;align-items:center;">
+    <img class="logo-img" src="https://picsum.photos/g/seed/logo/220/84" alt="Logo extra" />
+    <div class="left">EXTRA<br/>EXTRA</div>
   </div>
+  <div class="meta">
+    <div><strong>EDICIÓN ESPECIAL</strong></div>
+    <div>15 de noviembre de 2025</div>
+    <div>— Madrid —</div>
+  </div>
+</header>
 
-  <script>
+<div class="extra-banner" id="banner">¡NOTICIA DE ÚLTIMA HORA!</div>
+
+<article class="lead-story">
+  <!-- Imagen principal (hotlinked, escala en B/N) -->
+  <img class="lead-image" src="https://trinityproyect.github.io/free-photo-of-mar-blanco-y-negro-playa-costa.jpeg" alt="Foto principal - noticia" />
+
+  <div class="columns">
+    <h2>Gran Titular: Suceso que paraliza la ciudad</h2>
+    <p class="lead"><span class="dropcap">L</span>a ciudad se ha despertado hoy con una noticia que ha puesto en vilo a todos los ciudadanos. Los detalles comienzan a llegar y los testigos describen escenas propias de una película.</p>
+
+    <p>El acontecimiento, ocurrido en la madrugada, ha obligado a cortar varias calles y ha movilizado a los servicios de emergencia. Las primeras informaciones indican que no hay heridos de gravedad, pero la investigación continúa abierta. Varias autoridades locales han comparecido para ofrecer declaraciones oficiales y pedir calma a la población.</p>
+
+    <!-- Imagen pequeña en columna (hotlink) -->
+    <img class="small-img" src="https://picsum.photos/g/seed/column1/600/320" alt="Foto secundaria 1" />
+
+    <div class="pull-quote">"Fue impresionante ver cómo la gente se unía para ayudar" — un testigo.</div>
+
+    <p>Los comerciantes de la zona han señalado pérdidas materiales y una incertidumbre generalizada. A medida que pasen las horas, se espera que las cámaras de seguridad y las redes sociales aporten mayores pistas sobre lo sucedido. Mientras tanto, los ciudadanos intentan retomar la normalidad en una jornada tensa pero controlada por las fuerzas responsables.</p>
+
+    <h2>Contexto histórico</h2>
+    <p>Situado en pleno corazón de la ciudad, este enclave ha vivido episodios similares a lo largo del tiempo, aunque ninguno con la magnitud de lo ocurrido hoy. Las comparaciones con eventos anteriores sirven para entender la reacción social y las medidas adoptadas.</p>
+
+    <!-- Otra imagen pequeña -->
+    <img class="small-img" src="https://picsum.photos/g/seed/column2/600/320" alt="Foto secundaria 2" />
+
+    <h2>Opinión</h2>
+    <p>Es imprescindible que las autoridades aprovechen este episodio para mejorar los canales de comunicación y coordinar recursos. La sociedad ha mostrado solidaridad y eso debe ser valorado como un pilar para la reconstrucción de la confianza.</p>
+
+    <h2>Sucesos breves</h2>
+    <p><strong>- Tráfico:</strong> Interrupciones en varias vías principales hasta nuevo aviso.</p>
+    <p><strong>- Transporte público:</strong> Modificaciones temporales en dos líneas de metro.</p>
+    <p><strong>- Servicios:</strong> Recomendación de evitar desplazamientos innecesarios en la zona afectada.</p>
+
+    <h2>Cartas al director</h2>
+    <p>Si tienes alguna información o deseas contarnos tu experiencia, escribe a <em>redaccion@extra-extra.local</em> (ficticio).</p>
+
+  </div>
+</article>
+
+<footer class="credit">EXTRA EXTRA — Periódico clásico en blanco y negro — Diseño: estilo vintage</footer>
+
+  </div>  <script>
     document.getElementById('toggleBanner').addEventListener('click', function(){
       const b = document.getElementById('banner');
       b.style.display = (b.style.display === 'none') ? 'block' : 'none';
@@ -113,6 +110,5 @@
         document.documentElement.style.setProperty('--fg','#fff');
       }
     });
-  </script>
-</body>
+  </script></body>
 </html>
